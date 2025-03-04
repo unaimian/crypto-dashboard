@@ -1,4 +1,5 @@
 import { FC, memo } from 'react';
+import classNames from 'classnames';
 import { useFormatters } from '@hooks/useFormatters';
 import { AlertType } from '@enums/alerts.enum';
 import { AlertRowProps } from 'types/props.type';
@@ -13,13 +14,15 @@ const ALERT_TYPE_STYLES = {
 const AlertRow: FC<AlertRowProps> = ({ alert, isMostRecent }) => {
   const { formatPrice, formatTimestamp } = useFormatters();
   const alertTypeClass = ALERT_TYPE_STYLES[alert.alertType] || '';
-  const rowClassName =
-    `${styles.row} ${alertTypeClass} ${isMostRecent ? styles.mostRecentAlert : ''}`.trim();
+
+  const rowClassName = classNames(styles.row, alertTypeClass, {
+    [styles.mostRecentAlert]: isMostRecent,
+  });
 
   return (
     <tr className={rowClassName}>
       <td className={styles.message}>
-        <span className={`${styles.circle} ${alertTypeClass}`} />
+        <span className={classNames(styles.circle, alertTypeClass)} />
         {alert.alertMessage}
       </td>
       <td className={styles.price}>{formatPrice(alert.price)}</td>

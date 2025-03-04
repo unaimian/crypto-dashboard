@@ -40,7 +40,7 @@
 
 @keyframes highlight {
   0% {
-    background-color: rgba(252, 239, 212, 1.0);
+    background-color: rgba(252, 239, 212, 1);
   }
   100% {
     background-color: transparent;

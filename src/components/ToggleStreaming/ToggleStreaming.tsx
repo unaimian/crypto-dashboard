@@ -1,13 +1,15 @@
 import { useStream } from '@contexts/StreamContext';
+import classNames from 'classnames';
 import styles from './ToggleStreaming.module.css';
 
 const ToggleStreaming = () => {
   const { streaming, isLoading, toggleStreaming } = useStream();
 
-  const buttonClass = `
-    ${streaming ? styles.active : styles.inactive}
-    ${isLoading ? styles.loading : ''}
-  `;
+  const buttonClass = classNames({
+    [styles.active]: streaming,
+    [styles.inactive]: !streaming,
+    [styles.loading]: isLoading,
+  });
 
   const buttonText = isLoading
     ? 'Connecting...'
