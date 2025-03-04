@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 .tableContainer {
-  @apply rounded-xl shadow-sm bg-white border border-gray-100 overflow-hidden mb-8 overflow-x-auto max-h-[calc(100vh-200px)] overflow-y-auto;
+  @apply rounded-xl shadow-sm bg-white border border-gray-100 overflow-hidden mb-8 overflow-x-auto max-h-[calc(100vh-300px)] overflow-y-auto;
 }
 
 .table {

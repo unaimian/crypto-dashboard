@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { VscGraph } from 'react-icons/vsc';
 import { HiBellAlert } from 'react-icons/hi2';
 import { NavLink } from 'react-router-dom';
+import classNames from 'classnames';
 import ToggleStreaming from '../ToggleStreaming/ToggleStreaming';
 
 import styles from './Navigation.module.css';
@@ -18,8 +19,8 @@ const Navigation: FC = () => {
         <li className={styles.navItem}>
           <NavLink
             to="/monitor"
-            className={(isActive: boolean) =>
-              isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+            className={(isActive) =>
+              classNames(styles.navLink, { [styles.active]: isActive })
             }
           >
             <span className={styles.navIcon}>
@@ -31,8 +32,8 @@ const Navigation: FC = () => {
         <li className={styles.navItem}>
           <NavLink
             to="/alerts"
-            className={(isActive: boolean) =>
-              isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+            className={(isActive) =>
+              classNames(styles.navLink, { [styles.active]: isActive })
             }
           >
             <span className={styles.navIcon}>
