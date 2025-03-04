@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.dashboardHeader {
+  @apply flex justify-between items-center mb-8;
+}
+
+.title {
+  @apply text-2xl font-bold text-gray-900 mt-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+}
+
+.alertCardsGrid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6 mb-8;
+}
+
+@media (max-width: 768px) {
+  .dashboardHeader {
+    @apply flex-col items-start gap-4;
+  }
+
+  .headerActions {
+    @apply w-full;
+  }
+}

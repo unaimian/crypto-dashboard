@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+.row {
+  @apply py-4 bg-gray-50;
+}
+
+.cheapOrder {
+  @apply text-green-600;
+}
+
+.solidOrder {
+  @apply text-blue-600;
+}
+
+.bigOrder {
+  @apply text-purple-600;
+}
+
+.mostRecentAlert {
+  animation: highlight 2s ease-out;
+}
+
+.message {
+  @apply flex items-center font-semibold;
+}
+
+.circle {
+  @apply w-2 h-2 rounded-full mr-2 bg-current;
+}
+
+.price,
+.quantity,
+.total {
+  @apply text-left font-medium;
+}
+
+.time {
+  @apply whitespace-nowrap;
+}
+
+@keyframes highlight {
+  0% {
+    background-color: rgba(252, 239, 212, 1.0);
+  }
+  100% {
+    background-color: transparent;
+  }
+}

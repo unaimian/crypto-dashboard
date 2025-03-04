@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+.Layout {
+  @apply max-w-6xl mx-auto;
+}
+
+.error {
+  @apply container flex flex-row items-center mx-2 my-2 p-4 bg-red-100 text-red-600 py-4 rounded-lg text-sm border border-red-200;
+}
+
+.errorIcon {
+  @apply w-6 h-6 mr-2;
+}

@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+.monitorContainer {
+  @apply container mx-auto p-8;
+}
+
+.header {
+  @apply flex justify-between items-center;
+}
+
+.mainContent {
+  @apply flex-1 p-5 overflow-y-auto;
+}
+
+.title {
+  @apply text-2xl font-semibold text-gray-800 text-center;
+}
+
+.orderBookContainer {
+  @apply flex gap-5 bg-gray-50 rounded-lg shadow-sm overflow-hidden mt-5;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.error {
+  @apply bg-red-200 rounded-lg py-3 px-4 mb-4 text-red-600 text-sm my-2;
+}

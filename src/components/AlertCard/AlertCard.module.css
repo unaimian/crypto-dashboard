@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+.card {
+  @apply bg-white rounded-xl shadow-sm overflow-hidden transition-all hover:shadow-md border border-gray-100;
+}
+
+.header {
+  @apply flex justify-between items-center p-5 border-b border-gray-100;
+}
+
+.title {
+  @apply text-base font-semibold text-gray-800 m-0;
+}
+
+.count {
+  @apply text-lg font-bold py-1 px-4 rounded-full min-w-[3rem] text-center;
+}
+
+.card-cheap {
+  @apply border-t-4 border-green-500;
+}
+
+.card-solid {
+  @apply border-t-4 border-blue-500;
+}
+
+.card-big {
+  @apply border-t-4 border-purple-500;
+}
+
+.count-cheap {
+  @apply bg-green-100 text-green-600;
+}
+
+.count-solid {
+  @apply bg-blue-100 text-blue-600;
+}
+
+.count-big {
+  @apply bg-purple-100 text-purple-600;
+}

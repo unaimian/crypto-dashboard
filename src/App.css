@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+.app-container {
+  @apply bg-gray-200 text-white;
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'Source Code Pro', monospace;
+}
